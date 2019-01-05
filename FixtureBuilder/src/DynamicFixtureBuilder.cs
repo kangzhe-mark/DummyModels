@@ -1,11 +1,11 @@
 using System;
 using System.Dynamic;
-using System.Linq;
 using System.Reflection;
+using FixtureBuilder.Models;
 
 namespace FixtureBuilder
 {
-    class DynamicFixtureBuilder<T> : DynamicObject where T: IEntity, new()
+    public class DynamicFixtureBuilder<T> : DynamicObject where T: IEntity, new()
     {
         private T model;
         public DynamicFixtureBuilder()
@@ -20,15 +20,18 @@ namespace FixtureBuilder
         public override bool TrySetMember(SetMemberBinder binder, object value)
         {
             var propertyInfo = typeof(T).GetProperty(binder.Name, BindingFlags.Public | BindingFlags.Instance);
-            if (propertyInfo.PropertyType == value.GetType())
+            if (propertyInfo.PropertyType.IsInstanceOfType(value))
             {
                 propertyInfo.SetValue(model, value);
+                return true;
             }
-            else
+
+            if (propertyInfo.PropertyType.IsPrimitive && value.GetType().IsPrimitive)
             {
                 propertyInfo.SetValue(model, Convert.ChangeType(value, propertyInfo.PropertyType));
+                return true;
             }
-            return true;
+            return base.TrySetMember(binder, value);
         }
     }
 }

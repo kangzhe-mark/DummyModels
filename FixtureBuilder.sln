@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixtureBuilder", "FixtureBuilder\FixtureBuilder.csproj", "{12762302-315F-4984-9FE8-D978D1FCC19F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixtureBuilderTest", "FixtureBuilderTest\FixtureBuilderTest.csproj", "{457901B3-C91A-44D2-99F6-F6B99CAE12A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{12762302-315F-4984-9FE8-D978D1FCC19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12762302-315F-4984-9FE8-D978D1FCC19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12762302-315F-4984-9FE8-D978D1FCC19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{457901B3-C91A-44D2-99F6-F6B99CAE12A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{457901B3-C91A-44D2-99F6-F6B99CAE12A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{457901B3-C91A-44D2-99F6-F6B99CAE12A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{457901B3-C91A-44D2-99F6-F6B99CAE12A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

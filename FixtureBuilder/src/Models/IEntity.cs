@@ -1,4 +1,4 @@
-namespace FixtureBuilder
+namespace FixtureBuilder.Models
 {
     public interface IEntity
     {

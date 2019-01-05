@@ -1,4 +1,6 @@
 .idea/
 FixtureBuilder/bin/
 FixtureBuilder/obj/
+FixtureBuilderTest/bin/
+FixtureBuilderTest/obj/
 .DS_Store

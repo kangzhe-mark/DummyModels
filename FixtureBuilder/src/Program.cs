@@ -1,5 +1,6 @@
 ﻿
 using System;
+using FixtureBuilder.Models;
 
 namespace FixtureBuilder
 {
