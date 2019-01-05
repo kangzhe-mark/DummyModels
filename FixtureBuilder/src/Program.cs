@@ -7,9 +7,12 @@ namespace FixtureBuilder
     {
         static void Main(string[] args)
         {
-            var country = BuildCountry();
+//            var country = BuildCountry();
+            var country = DynamicBuildCountry();
 
+            Console.WriteLine(country.Id);
             Console.WriteLine(country.Name);
+            Console.WriteLine(country.Abbreviation);
         }
 
         private static Country BuildCountry()
@@ -20,6 +23,16 @@ namespace FixtureBuilder
                 .WithProperty(c => c.Abbreviation, "US")
                 .Build();
             return country;
+        }
+
+        private static Country DynamicBuildCountry()
+        {
+            dynamic countryBuilder = new DynamicFixtureBuilder<Country>();
+            countryBuilder.Name = "United States";
+            countryBuilder.Id = 3;
+            countryBuilder.Abbreviation = "US";
+            
+            return countryBuilder.Build();
         }
     }
 }
