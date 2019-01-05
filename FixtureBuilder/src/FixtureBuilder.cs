@@ -2,18 +2,18 @@ using System;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace DummyModels
+namespace FixtureBuilder
 {
-    public class DummyBuilder<T> where T : IEntity, new()
+    public class FixtureBuilder<T> where T : IEntity, new()
     {
         private T model;
 
-        public DummyBuilder()
+        public FixtureBuilder()
         {
             model = new T();
         }
         
-        public DummyBuilder<T> WithProperty<TProperty>(Expression<Func<T, TProperty>> propertyExp, TProperty value)
+        public FixtureBuilder<T> WithProperty<TProperty>(Expression<Func<T, TProperty>> propertyExp, TProperty value)
         {
             if (propertyExp.Body is MemberExpression member && member.Member is PropertyInfo propertyInfo)
             {

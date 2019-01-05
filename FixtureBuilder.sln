@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyModels", "DummyModels\DummyModels.csproj", "{12762302-315F-4984-9FE8-D978D1FCC19F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixtureBuilder", "FixtureBuilder\FixtureBuilder.csproj", "{12762302-315F-4984-9FE8-D978D1FCC19F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

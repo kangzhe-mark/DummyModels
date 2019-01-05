@@ -1,4 +1,4 @@
-namespace DummyModels
+namespace FixtureBuilder
 {
     public interface IEntity
     {

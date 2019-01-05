@@ -1,3 +1,4 @@
 .idea/
-DummyModels/bin/
-DummyModels/obj/
+FixtureBuilder/bin/
+FixtureBuilder/obj/
+.DS_Store

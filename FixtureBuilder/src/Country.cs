@@ -1,4 +1,4 @@
-namespace DummyModels
+namespace FixtureBuilder
 {
     public class Country : IEntity
     {
